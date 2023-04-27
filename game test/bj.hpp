@@ -37,7 +37,7 @@ int poop()
     int player_aces = 0;
     int dealer_aces = 0;
 
-    cout << "this is BJ game" << endl;
+    cout << "this is the BJ game" << endl;
 
     player_score += get_card_value(get_random_number(1, 13));
     dealer_score += get_card_value(get_random_number(1, 13));

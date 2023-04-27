@@ -2,37 +2,38 @@
 using namespace std;
 
 class Enemy{
-    enum DAMAGETYPE {
-        NORMAL
-    };
+private:
+int Health;
+int Damage;
 public:
-    getdamage();
     
     Enemy(int damage,int health) {
-        health = 100;
-        damage = damage;
+        Health = 100;
+        Damage = damage;
     }
     
-    void Damage(int Amount, DAMAGETYPE type) {
-        
-        if (type == NORMAL){
-            health -= health - 1;
-        }
-        
-    }
+   // void Damage(int Amount, DAMAGETYPE type) {
+   //     
+   //     if (type == NORMAL){
+   //         Health -= Health - 1;
+   //     }
+   //     
+   // }
     
     int getHealth() {
-        return health;
+        return Health;
     }
     void setHealth(int x){
-        health += x;
+        Health += x;
     }
-};
-
-
-
-void pepper() {
-    string pep = R"(ddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+    int getDamage() {
+        return Damage;
+    }
+    void setDamage(int x){
+        Damage += x;
+    }
+    void pepper() {
+        string pep = R"(ddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 ddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxkxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 ddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxkxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 dddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxkkxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
@@ -154,7 +155,10 @@ lccccccccllllooooodoolllodddddoodddoolcccloooddddxxxxxxxddddddddddddddddddooodoo
 :;;;;:::::::ccccccccccccccccccccccccllllllllllllllloddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxddddddddddddddddddddoooooolllllooooooooollllllllllllllllllloooooooollllccccccccccccc
 ;:::;:::::::cccccccccccccccccllccccclllllllllloolllloddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxddddddddddddddddddddoooooolllloooooollooolllllllllllllllllooooooollllllllccccccccccc
 ;::::::::::::ccccccccccccccccllcccccclllllllllooolclloddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxddddddddddddddddddddoooooolllloooooollooollllllllllllllllllooooollllllllllllllllcccc)";
-cout << pep;
+    cout << pep;
 }
-
 };
+
+
+
+

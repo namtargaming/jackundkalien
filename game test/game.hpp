@@ -1,6 +1,6 @@
 #include <iostream>
-#include "./player.hpp"
 #include "./bj.hpp"
+
 using namespace std;
 
 class game{
@@ -26,8 +26,8 @@ class game{
                     cout << choeseThree << endl;
                     return 3;
                     break;
-            //   case 69:
-            //       main();
+               case 69:
+                   poop();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
@@ -36,20 +36,20 @@ class game{
     // if attack returns 1 the defender is dead
     int attack(Player player, Enemy enemy, bool attackT_defendF){
         if(attackT_defendF){
-            enemy.health -= 10; // needs player damage 
+            enemy.setHealth(enemy.getHealth() - 10); // needs player damage 
 
         }
         else if(attackT_defendF == false){
-            player.setHealth(-1 * enemy.damage);
+            player.setHealth(-1 * enemy.getDamage());
         }
-        if(enemy.health <= 0 || player.getHealth() <= 0){
+        if(enemy.getHealth() <= 0 || player.getHealth() <= 0){
             return 1;
         }
         else{
             return 0;
         }
     }
-        void attackLoop(Player player, Enemy enemy){
+        int attackLoop(Player player, Enemy enemy){
         while(playing)
         {
             cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << endl ;
@@ -57,11 +57,11 @@ class game{
             switch (input) {
                 case 1:
                     cout << "You attack" << endl;
-                    enemy.health -= 10;
+                    enemy.setHealth(enemy.getHealth() - 10);
                     break;
                 case 2:
                     cout << "You defend" << endl;
-                    player.setHealth(-1 * (enemy.damage - player.getBlock()));
+                    player.setHealth(-1 * (enemy.getDamage() - player.getBlock()));
                     break;
                 case 3:
                     if(player.getHealth() >= 100){
@@ -72,11 +72,18 @@ class game{
                         player.setHealth((player.getHealth() + 10));
                         break;
                     }
-                //    case 69:
-                //        main();
+                    case 69:
+                        poop();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
+                    break;
             } 
+            if(enemy.getHealth() <= 0){
+                return 1;
+            }
+            if(player.getHealth() <= 0){
+                cout << "you loose :(" << endl;
+            }
         }
     }
 };
