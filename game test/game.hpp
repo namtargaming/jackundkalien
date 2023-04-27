@@ -1,7 +1,6 @@
 #include <iostream>
-#include <cstdio>
-#include "./Player.hpp"
-#include "./enime.hpp"
+#include "./player.hpp"
+#include "./enemy.hpp"
 using namespace std;
 
 class game{

@@ -1,3 +1,7 @@
+//  Created by YIM on 26/04/2023.
+#include <iostream>
+using namespace std;
+
 class Player {
     enum DAMAGETYPE {
         NORMAL,
