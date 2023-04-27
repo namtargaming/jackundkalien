@@ -1,5 +1,3 @@
-//  Created by James Boyko on 4/26/23.
-
 class Player {
     enum DAMAGETYPE {
         NORMAL,
