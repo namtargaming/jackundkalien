@@ -5,12 +5,12 @@ class Enemy{
     enum DAMAGETYPE {
         NORMAL
     };
-private:
 
-public:
+private:
     int health;
     int damage;
-    
+
+public:
     Enemy(int damage,int health) {
         health = health;
         damage = damage;
@@ -23,7 +23,42 @@ public:
         }
         
     }
+
+public:
+
     
+    Enemy() {
+        health = 100;
+    }
+    
+    void Damage(int Amount, DAMAGETYPE type) {
+        
+        if (type == NORMAL){
+            health -= LoseBlock(Amount);
+        }
+        
+    }
+    
+    int LoseBlock(int amount) {
+        int leftover = amount - block;
+        block -= amount;
+        if (leftover < 1) {
+            return 0;
+        }
+        
+        return leftover;
+    }
+    
+    int getHealth() {
+        return health;
+    }
+    void setHealth(int x){
+        health += x;
+    }
+};
+
+
+
 void pepper() {
     string pep = R"(ddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
 ddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxkxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk

@@ -22,5 +22,4 @@ int main() {
 
     cout << "Congratulations on winning the game!" << endl;
     pic();
-
 }
