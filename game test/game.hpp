@@ -38,9 +38,9 @@ class game{
 
         }
         else if(attackT_defendF == false){
-            player.health -= enime.damage;
+            player.setHealth(-1 * enime.damage);
         }
-        if(enime.health <= 0 || player.health <= 0){
+        if(enime.health <= 0 || player.getHealth() <= 0){
             return 1;
         }
         else{
@@ -55,16 +55,21 @@ class game{
             switch (input) {
                 case 1:
                     cout << "You attack" << endl;
-                    return 1;
+                    enime.health -= 10;
                     break;
                 case 2:
                     cout << "You defend" << endl;
-                    return 2;
+                    player.setHealth(-1 * (enime.damage - player.getBlock()));
                     break;
                 case 3:
-                    cout << "You heal" << endl;
-                    return 3;
-                    break;
+                    if(player.getHealth() >= 100){
+                        cout << "your health is full" << endl;
+                    }
+                    else{
+                        cout << "You heal" << endl;
+                        player.setHealth((player.getHealth() + 10));
+                        break;
+                    }
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
