@@ -1,4 +1,4 @@
-//  Created by YIM on Earth Day 2023.
+//  Created by Rat Man and YIM on Earth Day 2023.
 
 #include <iostream>
 #include "./edward.hpp"
