@@ -2,7 +2,6 @@
 
 #include <iostream>
 #include "./edward.hpp"
-#include "./enemy.hpp"
 #include "./game.hpp"
 
 
