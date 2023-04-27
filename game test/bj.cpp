@@ -30,14 +30,14 @@ int get_card_value(int card_number)
     }
 }
 
-int poop()
+int main()
 {
     int player_score = 0;
     int dealer_score = 0;
     int player_aces = 0;
     int dealer_aces = 0;
 
-    cout << "Welcome to CLI Blackjack!" << endl;
+    cout << "this is BJ game" << endl;
 
     player_score += get_card_value(get_random_number(1, 13));
     dealer_score += get_card_value(get_random_number(1, 13));
