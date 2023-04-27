@@ -1,10 +1,12 @@
 #include <iostream>
 using namespace std;
 
-class Enemy {
+class Enemy{
     enum DAMAGETYPE {
         NORMAL
     };
+private:
+
 public:
     int health;
     int damage;

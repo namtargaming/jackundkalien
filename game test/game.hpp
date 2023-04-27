@@ -1,6 +1,5 @@
 #include <iostream>
 #include "./player.hpp"
-#include "./enemy.hpp"
 #include "./bj.hpp"
 using namespace std;
 
@@ -27,8 +26,8 @@ class game{
                     cout << choeseThree << endl;
                     return 3;
                     break;
-                case 69:
-                    poop();
+            //   case 69:
+            //       main();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
@@ -73,8 +72,8 @@ class game{
                         player.setHealth((player.getHealth() + 10));
                         break;
                     }
-                    case 69:
-                        poop();
+                //    case 69:
+                //        main();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
