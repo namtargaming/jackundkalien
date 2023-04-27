@@ -14,13 +14,12 @@ int main() {
         Player player;
         game mainGame;
         cout << "Welcome to d.tech Edventure! You are Ed...ward." << endl << "You see a small child at a school. Attack them" << endl ;
-        Enemy ninthGrader(10,10,0);
-        return_value = mainGame.attackLoop(player, ninthGrader);
-        if(return_value == 1){
-        mainGame.attack(player,ninthGrader,true);
+        Enemy ninthGrader(10,10);
+        mainGame.attackLoop(player, ninthGrader);
     }
 
     cout << "Congratulations on winning the game!" << endl;
     pic();
-    }
+
 }
+

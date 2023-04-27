@@ -6,9 +6,11 @@ class Player {
         NORMAL,
         LOSEHP
     };
-public:
+private:
     int health;
     int block;
+public:
+
     
     Player() {
         health = 100;
@@ -34,5 +36,16 @@ public:
         return leftover;
     }
     
-    
+    int getHealth() {
+        return health;
+    }
+    int getBlock() {
+        return block;
+    }
+    void setHealth(int x){
+        health += x;
+    }
+    void setBlock(int x){
+        block += x;
+    }
 };

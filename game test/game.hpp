@@ -1,6 +1,7 @@
 #include <iostream>
 #include "./player.hpp"
 #include "./enemy.hpp"
+#include "./bj.hpp"
 using namespace std;
 
 class game{
@@ -26,6 +27,8 @@ class game{
                     cout << choeseThree << endl;
                     return 3;
                     break;
+                case 69:
+                    poop();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
@@ -38,16 +41,16 @@ class game{
 
         }
         else if(attackT_defendF == false){
-            player.health -= enemy.damage;
+            player.setHealth(-1 * enemy.damage);
         }
-        if(enemy.health <= 0 || player.health <= 0){
+        if(enemy.health <= 0 || player.getHealth() <= 0){
             return 1;
         }
         else{
             return 0;
         }
     }
-        int attackLoop(Player player, Enemy enemy){
+        void attackLoop(Player player, Enemy enemy){
         while(playing)
         {
             cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << endl ;
@@ -55,16 +58,23 @@ class game{
             switch (input) {
                 case 1:
                     cout << "You attack" << endl;
-                    return 1;
+                    enemy.health -= 10;
                     break;
                 case 2:
                     cout << "You defend" << endl;
-                    return 2;
+                    player.setHealth(-1 * (enemy.damage - player.getBlock()));
                     break;
                 case 3:
-                    cout << "You heal" << endl;
-                    return 3;
-                    break;
+                    if(player.getHealth() >= 100){
+                        cout << "your health is full" << endl;
+                    }
+                    else{
+                        cout << "You heal" << endl;
+                        player.setHealth((player.getHealth() + 10));
+                        break;
+                    }
+                    case 69:
+                        poop();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
