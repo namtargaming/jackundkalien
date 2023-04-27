@@ -30,7 +30,7 @@ int get_card_value(int card_number)
     }
 }
 
-int main()
+int poop()
 {
     int player_score = 0;
     int dealer_score = 0;
@@ -60,10 +60,10 @@ int main()
 
     while (player_score < 21)
     {
-        char choice;
-        cout << "Hit or stand? Type \"h\" or \"s\"";
+        int choice;
+        cout << "Hit or stand? Type 1 for hit or 2 for stand.";
         cin >> choice;
-        if (choice == 'h')
+        if (choice == 1)
         {
             int card = get_card_value(get_random_number(1, 13));
             player_score += card;
