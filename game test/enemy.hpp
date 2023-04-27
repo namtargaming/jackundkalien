@@ -10,14 +10,14 @@ public:
     int damage;
     
     Enemy(int damage,int health) {
-        health = health
+        health = health;
         damage = damage;
     }
     
     void Damage(int Amount, DAMAGETYPE type) {
         
         if (type == NORMAL){
-            health -= Health - 1;
+            health -= health - 1;
         }
         
     }

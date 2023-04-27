@@ -38,9 +38,9 @@ class game{
 
         }
         else if(attackT_defendF == false){
-            player.setHealth(-1 * enime.damage);
+            player.setHealth(-1 * enemy.damage);
         }
-        if(enime.health <= 0 || player.getHealth() <= 0){
+        if(enemy.health <= 0 || player.getHealth() <= 0){
             return 1;
         }
         else{
@@ -55,11 +55,11 @@ class game{
             switch (input) {
                 case 1:
                     cout << "You attack" << endl;
-                    enime.health -= 10;
+                    enemy.health -= 10;
                     break;
                 case 2:
                     cout << "You defend" << endl;
-                    player.setHealth(-1 * (enime.damage - player.getBlock()));
+                    player.setHealth(-1 * (enemy.damage - player.getBlock()));
                     break;
                 case 3:
                     if(player.getHealth() >= 100){
