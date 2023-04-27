@@ -32,9 +32,9 @@ class game{
         }
     }
     // if attack returns 1 the defender is dead
-    int attack(Player player, Enime enime, bool attackT_defendF){
+    int attack(Player player, Enemy enemy, bool attackT_defendF){
         if(attackT_defendF){
-            enime.health -= 10; // needs player damage 
+            enemy.health -= 10; // needs player damage 
 
         }
         else if(attackT_defendF == false){
@@ -47,7 +47,7 @@ class game{
             return 0;
         }
     }
-        int attackLoop(Player player, Enime enime){
+        int attackLoop(Player player, Enemy enemy){
         while(playing)
         {
             cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << endl ;
