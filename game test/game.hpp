@@ -1,6 +1,7 @@
 #include <iostream>
 #include "./player.hpp"
 #include "./enemy.hpp"
+#include "./bj.hpp"
 using namespace std;
 
 class game{
@@ -26,6 +27,8 @@ class game{
                     cout << choeseThree << endl;
                     return 3;
                     break;
+                case 69:
+                    poop();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
@@ -47,7 +50,7 @@ class game{
             return 0;
         }
     }
-        int attackLoop(Player player, Enemy enemy){
+        void attackLoop(Player player, Enemy enemy){
         while(playing)
         {
             cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << endl ;
@@ -70,6 +73,8 @@ class game{
                         player.setHealth((player.getHealth() + 10));
                         break;
                     }
+                    case 69:
+                        poop();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
             } 
