@@ -13,7 +13,9 @@ int main() {
     while(true){
         Player player;
         game mainGame;
-        cout << "Welcome to d.tech Edventure! You are Ed...ward." << endl << "You see a small child at a school. Attack them" << endl ;
+        cout << "Welcome to d.tech Edventure! You are Ed...ward." << endl << "You see a small child at a school. This is what they look like:" << endl;
+        pepper();
+        cout << endl << Attack them" << endl ;
         Enemy ninthGrader(10,10);
         mainGame.attackLoop(player, ninthGrader);
     }
@@ -22,4 +24,3 @@ int main() {
     pic();
 
 }
-
