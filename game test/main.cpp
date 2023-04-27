@@ -18,6 +18,7 @@ int main() {
         cout << endl << Attack them" << endl ;
         Enemy ninthGrader(10,10);
         mainGame.attackLoop(player, ninthGrader);
+        }
     }
 
     cout << "Congratulations on winning the game!" << endl;

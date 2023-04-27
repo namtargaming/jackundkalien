@@ -5,14 +5,11 @@ class Enemy{
     enum DAMAGETYPE {
         NORMAL
     };
-
-private:
-    int health;
-    int damage;
-
 public:
+    getdamage();
+    
     Enemy(int damage,int health) {
-        health = health;
+        health = 100;
         damage = damage;
     }
     
@@ -22,31 +19,6 @@ public:
             health -= health - 1;
         }
         
-    }
-
-public:
-
-    
-    Enemy() {
-        health = 100;
-    }
-    
-    void Damage(int Amount, DAMAGETYPE type) {
-        
-        if (type == NORMAL){
-            health -= LoseBlock(Amount);
-        }
-        
-    }
-    
-    int LoseBlock(int amount) {
-        int leftover = amount - block;
-        block -= amount;
-        if (leftover < 1) {
-            return 0;
-        }
-        
-        return leftover;
     }
     
     int getHealth() {
