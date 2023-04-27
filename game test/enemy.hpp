@@ -1,38 +1,25 @@
-//  Created by James Boyko on 4/26/23.
+#include <iostream>
+using namespace std;
 
-class Enime {
+class Enemy {
     enum DAMAGETYPE {
-        NORMAL,
-        LOSEHP
+        NORMAL
     };
 public:
     int health;
-    int block;
     int damage;
     
-    Enime(int Damage,int Health, int Block) {
-        health = Health;
-        block = Block;
-        damage = Damage;
+    Enemy(int damage,int health) {
+        health = health
+        damage = damage;
     }
     
     void Damage(int Amount, DAMAGETYPE type) {
         
         if (type == NORMAL){
-            health -= LoseBlock(Amount);
+            health -= Health - 1;
         }
         
-    }
-    
-    int LoseBlock(int amount) {
-        int leftover = amount - block;
-        block -= amount;
-        if (leftover < 1) {
-            block = 0;
-            return 0;
-        }
-        
-        return leftover;
     }
     
     
