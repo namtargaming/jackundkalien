@@ -1,7 +1,8 @@
+using namespace std;
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-using namespace std;
+
 
 int get_random_number(int min, int max)
 {

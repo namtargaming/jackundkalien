@@ -1,6 +1,5 @@
 #include <iostream>
 #include "./bj.hpp"
-
 using namespace std;
 
 class game{
