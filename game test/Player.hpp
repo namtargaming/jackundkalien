@@ -50,7 +50,7 @@ public:
         health += x;
     }
     void setBlock(int x){
-        block = x;
+        block += x;
     }
     int getDamage() {
         return damage;
