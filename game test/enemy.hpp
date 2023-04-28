@@ -24,13 +24,13 @@ public:
         return Health;
     }
     void setHealth(int x){
-        Health += x;
+        Health = x;
     }
     int getDamage() {
         return Damage;
     }
     void setDamage(int x){
-        Damage += x;
+        Damage = x;
     }
     void pepper() {
         string pep = R"(ddddddddddddddddxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk

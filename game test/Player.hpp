@@ -43,9 +43,9 @@ public:
         return block;
     }
     void setHealth(int x){
-        health += x;
+        health = x;
     }
     void setBlock(int x){
-        block += x;
+        block = x;
     }
 };

@@ -52,6 +52,7 @@ class game{
         int attackLoop(Player player, Enemy enemy){
         while(playing)
         {
+            bool playerBlocking = false;
             cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << "Your health: " <<  player.getHealth() << endl << "The enimes health: " <<  enemy.getHealth() << endl;
             cin >> input;
             switch (input) {
@@ -61,7 +62,7 @@ class game{
                     break;
                 case 2:
                     cout << "You defend" << endl;
-                    player.setHealth(-1 * (enemy.getDamage() - player.getBlock()));
+                    playerBlocking = true;
                     break;
                 case 3:
                     if(player.getHealth() >= 100){
@@ -72,12 +73,19 @@ class game{
                         player.setHealth((player.getHealth() + 10));
                         break;
                     }
-                    case 69:
+                case 69:
                         poop();
                 default:
                     cout << "please select 1, 2, or 3" << endl;
                     break;
             } 
+            if(playerBlocking){
+                cout << "you block the enimes attack" << endl;
+                player.setHealth(-1 * (enemy.getDamage() - player.getBlock()));
+            }
+            else if(playerBlocking == false){
+                player.setHealth(-1 * enemy.getDamage());
+            }
             if(enemy.getHealth() <= 0){
                 return 1;
             }

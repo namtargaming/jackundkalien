@@ -17,7 +17,9 @@ int main() {
         ninthGrader.pepper();
         cout << "Welcome to d.tech Edventure! You are Ed...ward." << endl << "You see a small 9th grade child at a school. That ^ is what they look like." << endl;
         cout << "Fight!" << endl ;
-        mainGame.attackLoop(player, ninthGrader);
+        return_value = mainGame.attackLoop(player, ninthGrader);
+        
+
         cout << "Congratulations on winning the game!" << endl;
         pic();
         playing = false;
