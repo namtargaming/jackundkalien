@@ -52,7 +52,7 @@ class game{
         int attackLoop(Player player, Enemy enemy){
         while(playing)
         {
-            cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << endl ;
+            cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << "Your health: " <<  player.getHealth() << endl << "The enimes health: " <<  enemy.getHealth() << endl;
             cin >> input;
             switch (input) {
                 case 1:
