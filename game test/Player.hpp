@@ -9,12 +9,16 @@ class Player {
 private:
     int health;
     int block;
+    int damage;
+    int healing;
 public:
 
     
     Player() {
         health = 100;
-        block = 0;
+        block = 10;
+        damage = 10;
+        healing = 12;
     }
     
     void Damage(int Amount, DAMAGETYPE type) {
@@ -43,9 +47,21 @@ public:
         return block;
     }
     void setHealth(int x){
-        health = x;
+        health += x;
     }
     void setBlock(int x){
         block = x;
+    }
+    int getDamage() {
+        return damage;
+    }
+    void setDamage(int x){
+        damage += x;
+    }
+    int getHealing() {
+        return healing;
+    }
+    void setHealing(int x){
+        healing += x;
     }
 };

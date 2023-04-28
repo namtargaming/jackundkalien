@@ -53,12 +53,12 @@ class game{
         while(playing)
         {
             bool playerBlocking = false;
-            cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << "Your health: " <<  player.getHealth() << endl << "The enimes health: " <<  enemy.getHealth() << endl;
+            cout << "what would you like to do?" << endl << "1: attack" << endl << "2: defend" << endl << "3: heal"  << endl << "Your health: " <<  player.getHealth() << endl << "The enimes health: " <<  enemy.getHealth() << endl;
             cin >> input;
             switch (input) {
                 case 1:
                     cout << "You attack" << endl;
-                    enemy.setHealth(enemy.getHealth() - 10);
+                    enemy.setHealth(enemy.getHealth() - player.getDamage());
                     break;
                 case 2:
                     cout << "You defend" << endl;
@@ -67,10 +67,11 @@ class game{
                 case 3:
                     if(player.getHealth() >= 100){
                         cout << "your health is full" << endl;
+                        break;
                     }
                     else{
                         cout << "You heal" << endl;
-                        player.setHealth((player.getHealth() + 10));
+                        player.setHealth(13);
                         break;
                     }
                 case 69:
@@ -84,6 +85,7 @@ class game{
                 player.setHealth(-1 * (enemy.getDamage() - player.getBlock()));
             }
             else if(playerBlocking == false){
+                cout << "the enemy attacks you" << endl;
                 player.setHealth(-1 * enemy.getDamage());
             }
             if(enemy.getHealth() <= 0){
@@ -91,6 +93,7 @@ class game{
             }
             if(player.getHealth() <= 0){
                 cout << "you loose :(" << endl;
+                return 0;
             }
         }
     }
