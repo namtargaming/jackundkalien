@@ -15,13 +15,8 @@ int main() {
         game mainGame;
         Enemy ninthGrader(10,10);
         ninthGrader.pepper();
-<<<<<<< Updated upstream
-        cout << endl << "Attack them" << endl ;
-=======
         cout << "Welcome to d.tech Edventure! You are Ed...ward." << endl << "You see a small 9th grade child at a school. That ^ is what they look like." << endl;
         cout << "Fight!" << endl ;
->>>>>>> Stashed changes
-
         mainGame.attackLoop(player, ninthGrader);
         cout << "Congratulations on winning the game!" << endl;
         pic();
